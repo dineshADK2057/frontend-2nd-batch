@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+    <style>
+        :root{
+            --backColor: #00ff00;
+            --XLradius: 0;
+        }
+
+
+        /* @media not | only media type and (media feature) and (media feature){
+            //css
+        } */
+
+        /* 
+
+        desktop: width (above 1280px) (min 1280px)
+        laptop: width (768px to 1280px) (min 768px to max 1280px)
+        tablet-protrait: width( 480 to 768) (min 480 to max 768)
+        tablet-landscape: width( 480 to 768) (min 480 to max 768)
+        mobile-protrait: width (below 480) (max 480)
+        mobile-landscape: width (below 480) (max 480)
+
+
+        */
+
+        .responsive{
+            /* height: 500px; */
+            min-height: calc(100vh - 80px);
+            /* width: 100%; */
+            max-width: calc(100% - 40px);
+            background-color: var(--backColor);
+            border-radius: var(--XLradius);
+
+            @media screen  and (max-width: 768px) and (min-width: 480px){
+                background-color: red;
+            }
+            @media screen and (max-width:480px){
+                background-color: blue;
+            }
+
+ 
+        }
+        
+        @media screen and (min-width: 768px){
+            body{
+                background-color: yellow;
+            }
+            .responsive{
+            height: 500px;
+            width: 100%;
+            background-color: blue;
+        }
+    }
+    @media screen and (min-width: 480px) and (max-width: 768px){
+            body{
+                background-color: blue;
+            }
+            .responsive{
+            height: 500px;
+            width: 500px;
+            background-color: #808080;
+        }           
+        }
+
+        
+        /* @media screen and (max-width: 480px){
+            body{
+                background-color: yellow;
+            }
+            .responsive{
+            height: 500px;
+            width: 100%;
+            background-color: blue;
+        } */
+    </style>
+</head>
+<body>
+
+    <div class="responsive">
+
+    </div>
+    
+
+
+    
+</body>
+</html>

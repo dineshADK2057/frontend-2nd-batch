@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms remaining</title>
+</head>
+<body>
+    <form action="">
+        <label for="message">Comments</label>
+        <textarea name="message" cols="100" rows="8" placeholder="Enter your message" ></textarea>
+
+        <br><br>
+        <label for="color">Select color</label>
+        <input type="color" name="color">
+
+        <br><br>
+        <label for="volume"> Volume: </label>
+        <input type="range" name="volume" min="0" max="100" value="80">
+        <br><br>
+        <label for="file">Upload Your File Here:</label>
+        <input type="file" name="file" accept=".jpg, .pdf, .png, .doc, .html, .js" multiple>
+
+        <br><br>
+        <label for="Number">Enter your phoneNumber</label>
+        <input type="number" name="Number" min="9700000000" max="9899999999">
+
+        <br><br>
+
+        <label for="phoneNumber">Enter Your phone Number</label>
+        <input type="tel" name="phoneNumber"  pattern="[9]{1}[7-8]{1}[0-6]{1}[0-9]{7}"
+         required  >
+
+         <br><br>
+         <label for="DOB">Enter your date of birth</label>
+         <input type="date" id="DOB" name="DOB"  >
+
+         <script>
+            const dobField = document.getElementById("DOB");
+            const today = new Date().toISOString().split('T')[0];
+            dobField.max = today;
+            
+         </script>
+
+       <input type="submit" value="Send" >
+         <!-- <button type="submit">Send</button>
+        <input type="reset" value="Reset">
+        <button type="reset">Reset</button> -->
+
+
+    </form>
+</body>
+</html>

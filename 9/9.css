@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    height: 100vh;
+    /* padding: 40px; */
+    /* padding-block: 40px; */
+    /* padding-inline: 40px; */
+    background-color: yellow;
+    
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+
+    flex-flow: row wrap;
+
+    /* justify-content: center; */
+    /* align-items: stretch; */
+
+    /* column-gap: 40px; */
+    /* row-gap: 40px; */
+    gap: 40px;
+    /* row-gap: 40px; */
+
+}
+
+.box{
+    height: 200px;
+    min-width: 300px;
+    background-color: red;
+    /* margin: 20px; */
+    /* flex-grow: 1; */
+    flex: 1;
+    /* flex-shrink: 2; */
+    /* flex: 0.5; */
+
+    /* flex (0-0.9 = shrink || 1 and above grow) */
+}
+
+.box3{
+    flex: 0.5;
+    order: -1;
+    font-size: 40px;
+    color: white;
+}

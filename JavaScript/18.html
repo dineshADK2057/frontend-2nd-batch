@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loops questions</title>
+  </head>
+  <body>
+    <script>
+      // factorial
+      // const number = parseInt(prompt("enter a number: "))
+      // let fact = 1;
+      // for (i=1; i <= number; i++) {
+
+      //     fact = fact*i;
+
+      // }
+
+      // console.log(`Factorial of ${number} is ${fact}`);
+
+      let num = 3234;
+
+      let userNumber1 = prompt("enter 4 digit number to guess: ");
+
+      if (userNumber1 == num) {
+        let newPin = prompt("Enter new pin to change: ");
+        let newPin2 = prompt("confirm your new pin: ");
+
+        if (newPin == newPin2) {
+          num = newPin;
+          console.log("Pin changed succesfully. your new pin is " + num);
+        } else {
+          console.log("new pin doesnot change");
+        }
+      } else {
+        for (let i = 2; i <= 4; i++) {
+          let userNumber2 = prompt(`enter ${i} guess: `);
+          if (userNumber2 == num) {
+            // console.log("correct guess");
+            // break;
+            let newPin = prompt("Enter new pin to change: ");
+            let newPin2 = prompt("confirm your new pin: ");
+
+            if (newPin == newPin2) {
+              num = newPin;
+              console.log("Pin changed succesfully. your new pin is " + num);
+            } else {
+              console.log("new pin doesnot change");
+            }
+            break;
+          }
+          if (i == 4 && userNumber2 != num) {
+            console.log("incorrect guessing");
+            break;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

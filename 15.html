@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      .box{
+            height: 80px;
+            width: 80px;
+            background-color: darkgoldenrod;
+            position: absolute;
+            left: 40px;
+            top: 40px;
+            animation-name: example;
+            animation-duration: 5s;
+            animation-delay: 0;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            transform: scale(1);
+            transition: all  3s linear;
+            
+        }
+        .box:hover{
+            transform: scale(0.5);
+        }
+        /* @keyframes  {
+            0%{
+                top: 40px;
+                left: 40px;
+            }
+            50%{
+                top: 40px;
+                right: 40px;
+            }
+            
+        } */
+
+      @keyframes example {
+        0% {
+          background-color: red;
+          transform: rotate(180deg);
+        }
+
+        50%{
+            transform: scale(0.5);
+        }
+        
+        100% {
+          background-color: red;
+          left: 500px;
+          transform: scale(1.5);
+        }
+        
+      } 
+
+      /* The element to apply the animation to */
+      /* .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background-color: red;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

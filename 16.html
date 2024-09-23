@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: brown;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+        }
+        .box::after{
+            content: "";
+            width: 40px;
+            height: 40px;
+            background-color: aliceblue;
+            transform: scaleX(1);
+            cursor: pointer;
+            transition: all 0.8s linear;
+            transform-origin: left;
+            position: absolute;
+            /* bottom: ; */
+            left: 0;
+        }
+        .box:hover::after{
+            transform: scaleX(1.5);
+            background-color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box">
+            <h1>this is box</h1>
+            <a href="">this is link</a>
+        </div>
+    </div>
+</body>
+</html>

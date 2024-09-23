@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+
+    <style>
+        
+        .gridLayout{
+            height: 800px;
+            width: 800px;
+            /* background-color: aqua; */
+            display: grid;
+            /* grid-template-areas: 
+                "aside header"
+                "aside main" 
+                "aside footer" 
+            ; */
+            grid-template-columns: 200px 1fr;
+            /* grid-template-columns: repeat(3, 1fr); */
+
+            grid-template-rows: 100px 1fr 200px;
+            /* row-gap: 40px;
+            column-gap: 80px; */
+            gap: 40px;
+
+            
+            
+            justify-items: stretch; /*horizontally place items*/
+            align-items: stretch; /*vertically place items*/
+            
+        }
+        header{
+            /* grid-area: header; */
+            background-color: blue;
+            
+        }
+        aside{
+            /* grid-area: aside; */
+            background-color: red;
+            grid-column: 1/2;
+            grid-row: 1/4;
+
+        }
+        main{
+            /* grid-area: main; */
+            background-color: yellow;
+            background-image: url("");
+        }
+        footer{
+            /* grid-area: footer; */
+            background-color: black;
+        }
+        /* .box{
+            background-color: brown;
+            height: 200px;
+            width: 200px;
+            
+            
+
+        }
+        .last{
+            align-self: end;
+            justify-self: end;
+            grid-column: ; 
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        .box5{
+            grid-column: 2/4;
+        }
+        .box1{
+            grid-area: "header";
+        } */
+
+    </style>
+
+</head>
+<body>
+
+    <div class="gridLayout">
+        <!-- <div class="box box1"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box box5"></div>
+        <div class="box"></div>
+        <div class="box last">last box</div> -->
+        <!-- <div class="box"></div> -->
+        <!-- <div class="box"></div> -->
+
+        <header></header>
+        <aside></aside>
+        <main></main>
+        <footer></footer>
+    </div>
+
+</body>
+</html>

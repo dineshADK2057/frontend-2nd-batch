@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selector</title>
+    <style>
+        /* selector:pseudo enement{
+            property: value;
+        } */
+         main{
+            display: flex;
+            flex-direction: column;
+            /* gap: 10px; */
+         }
+        .box{
+            width: 300px;
+            height: 300px;
+            /* margin-bottom: 20px; */
+            border-bottom: 2px solid yellow;
+            background-color: red;
+            /* transition: background-color 0.3s linear; */
+        }
+        /* .main:first-child{
+
+            background-color: black !important;
+        } */
+         .box:first-child{
+            background-color: black;
+         }
+         .box:last-child{
+            border: none;
+         }
+         .box:nth-child(3):hover{
+            background-color: yellow;
+            /* position: relative; */
+         }
+         .box:nth-child(3){
+            position: relative;
+         }
+         .box:nth-child(3)::after{
+            content: "";
+            width: 100px;
+            height: 2px;
+            background-color: black;
+            position: absolute
+
+         }
+         
+         .box:nth-child(3)::before{
+            content: "before ";
+         }
+
+
+         /* .box:nth-child(3)::after:hover{
+            
+            width: 100%;
+            
+
+
+         } */
+         input{
+            outline: none;
+         }
+         input::placeholder{
+            /* font-size: 30px; */
+            color: red;
+         }
+         /* input:focus{
+            border: 20px solid yellow;
+         } */
+
+         input:not(:placeholder-shown){
+            padding: 20px;
+         }
+         button{
+            background-color: blue;
+            color: white;
+         }
+         button:disabled{
+            cursor: not-allowed;
+            background-color: aliceblue;
+            color: black;
+         }
+
+
+
+         
+    </style>
+</head>
+<body>
+    <main class="main">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box">this is content</div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </main>
+    <label for="name">Full Name</label>
+    <div class="box jhhdfs"></div>
+    <div class="box jhhdfs"></div>
+    <input type="text" name="name" id="" placeholder="enter your name">
+    <button disabled>this is disable</button>
+</body>
+</html>
