@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays and objects</title>
+  </head>
+  <body>
+    <script>
+      // OBJECTS
+      // A JavaScript object is a collection of **named values.**
+      // In Simple words Object is used to stored multiple data in single variable.
+
+      // syntax
+      // objName = {
+      //     name: value,
+      //     name2: value2,
+      // }
+
+      // creating objects
+      // const user = {
+      //     id: 4353,
+      //     fullName: "Ram Khadka",
+      //     address: "Bharatpur-10",
+      // }
+
+      // updating objects
+      // const name = "shyam";
+
+      // user.fullName = name;
+
+      // console.log(user.fullName);
+
+      // Arrays
+      // An array in JavaScript is a data structure that allows you to store multiple values in a single variable. It's like a list of items, where each item can be accessed by its index (position) in the list. The items in an array can be of any data type, including numbers, strings, objects, and other arrays. Arrays are a useful tool for organising and manipulating data in a program.
+
+      // syntax
+      // const/let/var arrayName = [item1, item2, item3,.....]
+
+      /*
+        arrayName = [
+            0th index: value,
+            1st index: value,
+            2nd index: value,
+            3rd index: value,
+        ]
+        */
+      // creating an array
+      // const newArray = [
+      //     4321,
+      //     "Ram",
+      //     {
+      //         carName: "BMW",
+      //         price: "$4564",
+      //         color: "red"
+      //     }
+      // ]
+
+      // console.log( newArray[2].carName );
+
+      // loops in arrays and objects (for...in, for...of, forEach)
+
+      // for...in
+      // for.....in loop
+        // only for objects
+    
+    // variable in for.....in loop returns key of an object or index of an array
+      // syntax
+      // for(variable in array/objectName){
+      //     // Statements
+      // }
+      const newArray = [
+          4321,
+          "Ram",
+          {
+              carName: "BMW",
+              price: "$4564",
+              color: "red"
+          }
+      ]
+      
+    //   for (const element in newArray) {
+    //       console.log(newArray[element]);
+    //   }
+    //   const cars = {
+    //       carName: "BMW",
+    //     price: "$4564",
+    //           color: "red"
+    //   }
+
+    //   for (const car in cars) {
+    //       console.log(cars[car]);
+    //   }
+
+      
+    
+      //forof works similar to for loop (i=0, i<array.length, i++) and also similar to for in but variables in for of loop returns the value instead of key in an array.
+        //syntsx
+      // for (const variable of arrayName) {
+      //     statements
+
+      // }
+
+    //   for (const element of newArray) {
+    //     console.log(element);
+    //   }
+
+    // forEach
+    // syntax
+    // arrayName.forEach(variable => {
+    //     // statements
+    // });
+          
+    // newArray.forEach((element)=>{
+    //     console.log(element);
+    // })
+
+    
+
+
+    </script>
+  </body>
+</html>

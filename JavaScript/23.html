@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <!-- 
+        **There is even better way to select element in DOM elements**
+
+        `getElementById` → we can directly select element using its id
+
+        `getElementByClassName` → we can select element using its class name
+
+        `getElementByName` → we can select element using name attribute
+
+        `getElementByTagName` → we can select element using tag
+
+        `querySelector` -> we can select either id, or class or tagName but only one first element
+
+        `querySelectorAll` -> we can select all elements either class or tagName
+    -->
+
+    <h1 id="name" class="dinesh"></h1>
+        this is name
+    </h1>
+    <div class="dinesh">
+        Dinesh
+    </div>
+    <div class="dinesh">
+        frontend
+    </div>
+
+    
+
+    <!-- <a href="" id="link">click here</a> -->
+     <button id="link">click</button>
+
+    <script>
+        // const heading = document.getElementById("name");
+        // const heading = document.querySelector("#name"); //id
+        // const heading = document.querySelector(".dinesh"); //class
+        // const heading = document.querySelector("div"); //tag
+        // const heading = document.querySelectorAll("div"); //tag
+        const heading = document.querySelectorAll(".dinesh"); //class
+        console.log(heading);
+
+        // const linkTag = document.getElementById("link");
+        // map
+        // const studentsData = [
+        //     {
+        //         name: "Ram Thapaliya",
+        //         address: "Tanahun",
+        //         age: 23,
+        //     },
+        //     {
+        //         name: "Kiran Sigdel",
+        //         address: "Bharatpor-23",
+        //         age: 12,
+        //     },
+        //     {
+        //         name: "Sonam Sapkota",
+        //         address: "Bharatpor-14",
+        //         age: 15,
+        //     },
+        //     {
+        //         name: "Bikram Khadka",
+        //         address: "Gaidakot -10",
+        //         age: 18,
+        //     },
+            
+        // ]
+        
+        // const filteredStudentData = studentsData.filter((data)=>data.age<16);
+        // // console.log(filteredStudentData);
+        // const name = filteredStudentData.map((data)=> data.name);
+
+
+        // linkTag.addEventListener("click", ()=>{
+
+        //     heading.style.color = "blue";
+        //     heading.innerHTML = name;
+        // })
+
+
+        
+    </script>
+    
+</body>
+</html>

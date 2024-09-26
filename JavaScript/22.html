@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    
+    <body>
+    
+    <script>
+        // map(), filter(), reduce(), sort()
+
+        // sort()
+        // const number = [1,45,32,654,100]
+
+        // console.log(number.sort());
+        // console.log(number.sort((a, b)=> b-a)); //descending
+        // console.log(number.sort((a, b)=> a-b)); //ascending
+
+
+        // reduce
+        // const number = [1,2,3,4, 5, 6, 7, 8, 9];
+        // console.log(number.reduce((a, b)=>a*b));
+        
+        // filter
+        // const number = [1,2,3,4, 5, 6, 7, 8, 9];
+        // console.log(number.filter((a)=>a%2==1));
+
+
+        // map
+        const studentsData = [
+            {
+                name: "Ram Thapaliya",
+                address: "Tanahun",
+                age: 23,
+            },
+            {
+                name: "Kiran Sigdel",
+                address: "Bharatpor-23",
+                age: 12,
+            },
+            {
+                name: "Sonam Sapkota",
+                address: "Bharatpor-14",
+                age: 15,
+            },
+            {
+                name: "Bikram Khadka",
+                address: "Gaidakot -10",
+                age: 18,
+            },
+            
+        ]
+        
+        const filteredStudentData = studentsData.filter((data)=>data.age<16);
+        // console.log(filteredStudentData);
+        
+        console.log(filteredStudentData.map((data)=> data.name));
+
+
+        
+
+
+
+
+
+
+    </script>
+    </body>
+</html>
