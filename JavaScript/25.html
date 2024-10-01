@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        #dropdown{
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: all 0.5s linear;
+            height: 200px;
+        }
+        .active{
+            transform: scaleY(1);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <!-- <h1>jbnsdfsde</h1>
+        <h1>jbnsdfsde</h1> -->
+
+    </div>
+
+    <h1 id="hover">heading</h1>
+
+    <div id="dropdown" style="background-color: red; width: 100px;">
+
+    </div>
+
+    <script>
+
+        const headin = document.getElementById("hover");
+        const dropdown = document.getElementById("dropdown");
+        headin.addEventListener("mouseenter", ()=>{
+            dropdown.style.height= "200px"
+            dropdown.style.transform= "scaleY(1)"
+            
+        })
+        
+        headin.addEventListener("mouseout", ()=>{
+            dropdown.style.transform= "scaleY(0)"
+            // dropdown.style.height= "0px"
+        })
+
+
+
+
+        const container = document.getElementById("container");
+
+        container.style.height = "200px";
+        container.style.width = "200px";
+        container.style.backgroundColor = "red";
+
+        // const heading = document.createElement("p");
+        // heading.innerText = "This is heading 1"
+
+        // const link = document.createElement("a");
+        // link.appendChild(heading)
+
+        for (let index = 0; index < 3; index++) {
+            const heading = document.createElement("p");
+            heading.innerText = `This is heading ${index}`
+            heading.style.color = "white"
+            container.appendChild(heading);
+        }
+
+        console.log(container)
+        
+
+        // container.appendChild(heading);
+        // container.append(link);
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
