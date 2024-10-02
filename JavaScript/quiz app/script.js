@@ -34,9 +34,9 @@ const questions = [
       "Which of the following British presenters never presented 'Strictly Comes Dancing'?",
     answers: [
       { text: "Claudia Winkleman", correct: false },
-      { text: "Tess Daly", correct: true },
+      { text: "Tess Daly", correct: false },
       { text: "Andrea Hamilton", correct: false },
-      { text: "Stacey Dooley", correct: false },
+      { text: "Stacey Dooley", correct: true },
     ],
   },
 ];
