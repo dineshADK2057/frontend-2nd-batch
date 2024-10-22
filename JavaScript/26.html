@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asynchronous programming</title>
+  </head>
+  <body>
+    <h1>Your current Time is:</h1>
+    <br />
+
+    <div id="clock" style="display: flex;">
+      <div id="hr"></div>
+      <div id="min"></div>
+      <div id="sec"></div>
+    </div>
+
+    <div class="numbers"></div>
+
+
+
+    <script>
+      // return dates
+      const time = new Date();
+
+    //   console.log(time);
+      
+
+      // selecting html elements to put times
+      const clock = document.getElementById("clock");
+      const hr = document.getElementById("hr");
+      const min = document.getElementById("min");
+      const sec = document.getElementById("sec");
+
+      // console.log(time.getHours);
+
+      // new Date() bata aako time lai hour, min ra sec ma individually rakheko
+
+      var hour = time.getHours();
+      var minutes = time.getMinutes();
+      var seconds = time.getSeconds();
+
+      // hours, min ra second lai as a digital clock banako
+
+      hr.innerHTML = hour + " : ";
+      min.innerHTML = " " + minutes + " : ";
+      sec.innerHTML = " " + seconds;
+
+
+      const numbers = document.querySelector(".numbers");
+
+      // var num = 0;
+      function numSum() {
+        // alert("this is setInterval")
+        seconds++;
+        if (seconds > 59) {
+          seconds = 0;
+          minutes++;
+          if (minutes > 59) {
+            minutes = 0;
+            hour++;
+          }
+        }
+        sec.innerHTML = " " + seconds;
+        min.innerHTML = " " + minutes + " : ";
+        hr.innerHTML = hour + " : ";
+
+        console.log(seconds);
+        
+
+
+      }
+
+      setInterval(numSum, 1000);
+
+    //   setTimeout(()=>{
+    //     console.log("settimeout");
+    //   }, 5000)
+
+    </script>
+  </body>
+</html>
