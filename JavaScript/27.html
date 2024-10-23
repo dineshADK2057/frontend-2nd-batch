@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callbacks & Promises</title>
+  </head>
+  <body>
+    <script>
+      // CALLBACKS
+      // a callback function is a function that is passed as an argument to another function and is called when the other function has completed its task. The function that receives the callback is responsible for executing it at the appropriate time.
+      // Callbacks are used extensively in asynchronous programming in JavaScript to handle events and to perform non-blocking operations.
+
+      // function name (callback){
+      //     console.log("this is mornal log");
+      //     setTimeout(()=>{
+      //         callback();
+      //         // console.log("this is asynchronous callback");
+
+      //     },2000)
+      // }
+
+      // function nameCall (){
+      //     console.log("this is callback");
+      // }
+      // name(nameCall);
+
+      //   function fetchData(callback) {
+      //     setTimeout(() => {
+      //       const data = [1, 2, 3, 4, 5];
+      //       callback(data);
+      //     }, 2000);
+      //   }
+
+      //   function processData(data) {
+      //     console.log(data.map((item) => item * 2));
+      //   }
+
+      //   function additon(data){
+      //     console.log(data.map((item) => item + 2));
+
+      //   }
+
+      //   fetchData(additon); // Pass processData function as a callback
+
+      // CALLBACK HELL
+
+      // Callback hell, also known as "pyramid of doom," is a term used to describe a situation in asynchronous programming where multiple levels of nested callbacks are used, making the code difficult to read, maintain, and debug. This occurs when multiple asynchronous functions need to be executed sequentially or when one function depends on the result of another function.
+
+      //   getData((error, data) => {
+      //     if (error) {
+      //       console.error(error);
+      //     } else {
+      //       processData(data, (error, processedData) => {
+      //         if (error) {
+      //           console.error(error);
+      //         } else {
+      //           saveData(processedData, (error) => {
+      //             if (error) {
+      //               console.error(error);
+      //             } else {
+      //               console.log("Data saved successfully!");
+      //             }
+      //           });
+      //         }
+      //       });
+      //     }
+      //   });
+
+      //     ### Promise
+
+      // A promise in JavaScript is an object representing the eventual completion or failure of an asynchronous operation and its resulting value. It's a way of handling asynchronous code in a more readable and predictable way.
+
+      // A promise has three states:
+
+      // 1. Pending: The initial state when the promise is created.
+      // 2. Fulfilled OR Resolved: The state when the promise is resolved successfully with a value.
+      // 3. Rejected: The state when the promise is rejected with an error.
+
+      const number = new Promise((resolve, reject) => {
+        const isError = fetch("");
+        if (isError) {
+            reject("something is wrong");
+        } else {
+            resolve("This operation is fulfilled");
+        }
+      })
+    //   console.log(number);
+    number.then((data)=>{
+        console.log(data);
+    }) .catch((error)=>{
+        console.log(error);
+    })
+      
+
+
+    </script>
+  </body>
+</html>
