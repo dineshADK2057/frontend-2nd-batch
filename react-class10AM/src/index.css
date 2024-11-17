@@ -1,0 +1,16 @@
+.cardContainer{
+    display: flex;
+    padding: 20px;
+    border: 1px solid gainsboro;
+    border-radius: 16px;
+}
+.img{
+    width: 30%;
+}
+.info{
+    width: 70%;
+}
+.extraCard{
+    background-color: aqua;
+}
+#
