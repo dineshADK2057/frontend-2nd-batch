@@ -1,6 +1,5 @@
-
-
-import Card from "./components/Card"
+import StateHook from "./components/useState/StateHook"
+import Text from "./components/useState/Text"
 
 
 
@@ -8,10 +7,14 @@ function App() {
 
   return (
     <>
-      <Card title="1" name="Kasam" />   
+      {/* <Card title="1" name="Kasam" />   
       <Card title="2" name="Sirish" />   
-      <Card jushduf = "extraCard"/>   
-      <Card title="4" name="Sonam" />   
+      <Card extra = "extraCard"/>   
+      <CardContainer title="4" name="Sonam" />  
+      <SecondCard/>  */}
+
+      {/* <StateHook/> */}
+      <Text/>
     </>
   )
 }
