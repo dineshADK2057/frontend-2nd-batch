@@ -1,8 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const StateHook = () => {
+
+    
     
     const [count, increasCount] = useState(0);
+
+    useEffect(()=>{
+       console.log("this is mounting stage");
+
+       return function (){
+        console.log("component unmounted");
+       }
+
+    }, [])
+    useEffect(()=>{
+        console.log("count is updated");
+     }, [count])
 
 
     const handelIncreaseCllick = ()=>{

@@ -1,9 +1,12 @@
+import { useState } from "react"
 import StateHook from "./components/useState/StateHook"
 import Text from "./components/useState/Text"
 
 
 
 function App() {
+
+  const [isShow, setIsShow] = useState(true)
 
   return (
     <>
@@ -13,8 +16,28 @@ function App() {
       <CardContainer title="4" name="Sonam" />  
       <SecondCard/>  */}
 
-      {/* <StateHook/> */}
+      {/* 
+        lifecycles of react components
+        1. initialize
+        2. mount
+        3. update
+        4. unmount
+
+        useEffect syntax:
+        1. import useEffect from react
+        2. useEffect(()=>{
+            my logic here;
+          }, [])
+      */}
+
+
+
       <Text/>
+
+      <button onClick={()=>{setIsShow(!isShow)}}>toggle</button>
+      <br />
+      <br />
+      {isShow ? <StateHook/> : ""}
     </>
   )
 }
