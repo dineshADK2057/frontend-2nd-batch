@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
+
 const StateHook = () => {
 
     
@@ -31,6 +32,7 @@ const StateHook = () => {
         <button onClick={
             ()=>{increasCount((count)=> count-1)}} 
         >decrease count</button>
+
         the count is {count}
       
     </>

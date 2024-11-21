@@ -17,7 +17,7 @@ const Text = () => {
         }} >To Upper Case</button>
 
         <h1>{text}</h1>
-        <p>your letter count is {text.length}</p>
+        <p>your character count is {text.length}</p>
 
     </>
   )

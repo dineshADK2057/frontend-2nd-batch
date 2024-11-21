@@ -1,12 +1,51 @@
-import { useState } from "react"
-import StateHook from "./components/useState/StateHook"
+
 import Text from "./components/useState/Text"
+import DigitalClock from "./components/DigitalClock"
+import { BrowserRouter, createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom"
+import Layout from "./components/layout/Layout"
+import StateHook from "./components/useState/StateHook"
+import Products from "./components/Products"
+import ProductPage from "./components/ProductPage"
+
 
 
 
 function App() {
 
-  const [isShow, setIsShow] = useState(true)
+  // const [isShow, setIsShow] = useState(true)
+
+  const router = createBrowserRouter([
+    {
+      path:"/",
+      element: <Layout/>,
+      children: [
+        {
+          path:"/",
+          element:<DigitalClock/>
+        },
+        {
+          path:"/counter",
+          element: <StateHook/>,
+        },
+        {
+          path: "/textapp",
+          element: <Text/>
+        },
+        {
+          path: "/products",
+          element: <Products/>
+        },
+        {
+          path: "/products/:productID",
+          element: <ProductPage/>
+        }
+        
+    ]
+    }
+  ])
+
+
+
 
   return (
     <>
@@ -32,12 +71,27 @@ function App() {
 
 
 
-      <Text/>
+      {/* <Text/>
 
       <button onClick={()=>{setIsShow(!isShow)}}>toggle</button>
       <br />
       <br />
       {isShow ? <StateHook/> : ""}
+
+      <br /><br />
+      <DigitalClock/> */}
+
+      <RouterProvider router={router}/>
+      {/* <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<DigitalClock />} />
+          <Route path="textapp" element={<Text />} />
+          <Route path="counter" element={<StateHook />} />
+        </Route>
+      </Routes>
+    </BrowserRouter> */}
+
     </>
   )
 }
